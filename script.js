@@ -1,7 +1,9 @@
 const width = window.innerWidth;
 const height = window.innerHeight * 0.85;
 
-const svg = d3.select("#map");
+const svg = d3.select("#map")
+  .attr("width", width)
+  .attr("height", height);
 
 const tooltip = d3.select("#tooltip");
 
