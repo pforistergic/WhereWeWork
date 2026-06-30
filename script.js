@@ -1,11 +1,9 @@
-const width = window.innerWidth;
-const height = window.innerHeight * 0.85;
-
-const svg = d3.select("#map")
-  .attr("width", width)
-  .attr("height", height);
-
+const svg = d3.select("#map");
 const tooltip = d3.select("#tooltip");
+
+// IMPORTANT: fixed internal coordinate system
+const width = 960;
+const height = 600;
 
 const projection = d3.geoAlbersUsa()
   .translate([width / 2, height / 2])
@@ -13,7 +11,11 @@ const projection = d3.geoAlbersUsa()
 
 const path = d3.geoPath().projection(projection);
 
-// Load US states (TopoJSON)
+// Set SVG viewBox ONLY (this enables responsiveness)
+svg.attr("viewBox", `0 0 ${width} ${height}`)
+   .attr("preserveAspectRatio", "xMidYMid meet");
+
+// Load map
 d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json")
   .then(us => {
 
@@ -29,6 +31,7 @@ d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json")
       })
       .attr("d", path)
       .on("mouseover", function (event, d) {
+
         const abbr = getStateAbbr(d.id);
         const state = stateData[abbr];
 
@@ -54,7 +57,7 @@ d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json")
       });
   });
 
-// Convert numeric FIPS → state abbreviation
+// FIPS → state abbreviation
 function getStateAbbr(id) {
   const map = {
     1:"AL",2:"AK",4:"AZ",5:"AR",6:"CA",8:"CO",9:"CT",
