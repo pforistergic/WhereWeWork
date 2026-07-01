@@ -5,10 +5,12 @@ const tooltip = d3.select("#tooltip");
 const width = 960;
 const height = 600;
 
-const projection = d3.geoAlbersUsa()
-  .translate([width / 2, height / 2])
-  .scale(1300);
-
+svg
+  .attr("viewBox", `0 0 ${width} ${height}`)
+  .attr("preserveAspectRatio", "xMidYMid meet")
+  .attr("width", "100%")
+  .attr("height", "100%");
+  
 const path = d3.geoPath().projection(projection);
 
 // Set SVG viewBox ONLY (this enables responsiveness)

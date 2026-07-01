@@ -1,32 +1,33 @@
+html,
 body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #fff;
   font-family: Arial, sans-serif;
-  background: #ffffff;
   color: #1f2d1f;
 }
 
-/* REMOVE header entirely if not used */
 header {
   display: none;
 }
 
-/* THIS is the key fix */
+/* Container */
 .map-wrapper {
   width: 100%;
-  aspect-ratio: 16 / 10;
-  display: block;
 }
 
+/* Responsive SVG */
 #map {
-  width: 100%;
-  height: 100%;
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* STATES */
 .state {
   fill: #b9d6c0;
-  stroke: #ffffff;
+  stroke: #fff;
   stroke-width: 1;
   cursor: pointer;
   transition: fill 0.2s ease;
