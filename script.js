@@ -1,21 +1,19 @@
 const svg = d3.select("#map");
 const tooltip = d3.select("#tooltip");
 
-// IMPORTANT: fixed internal coordinate system
+// Internal drawing size
 const width = 960;
 const height = 600;
 
+// Make the SVG responsive
 svg
   .attr("viewBox", `0 0 ${width} ${height}`)
   .attr("preserveAspectRatio", "xMidYMid meet")
   .attr("width", "100%")
   .attr("height", "100%");
-  
-const path = d3.geoPath().projection(projection);
 
-// Set SVG viewBox ONLY (this enables responsiveness)
-svg.attr("viewBox", `0 0 ${width} ${height}`)
-   .attr("preserveAspectRatio", "xMidYMid meet");
+const projection = d3.geoAlbersUsa();
+const path = d3.geoPath().projection(projection);
 
 // Load map
 d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json")
