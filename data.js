@@ -39,7 +39,7 @@ const stateData = {
 
   KY: {
     name: "Kentucky",
-    communities: []
+    communities: ["Bowling Green"]
   },
 
   MS: {
@@ -76,5 +76,10 @@ const stateData = {
   MT: {
     name: "Montana",
     communities: ["Bozeman"]
-  }
+  },
+
+  //TX: {
+  //  name: "Texas",
+  //  communities: ["Dallas", "Ft Worth", "Austin", "San Antonio"]
+  //}
 };

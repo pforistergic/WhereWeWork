@@ -56,11 +56,26 @@ d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json")
           `);
       })
       .on("mousemove", function (event) {
+        const tooltipNode = tooltip.node();
+        const tooltipWidth = tooltipNode.offsetWidth;
+        const tooltipHeight = tooltipNode.offsetHeight;
 
+        // Default positioning (down and to the right)
+        let left = event.pageX + 12;
+        let top = event.pageY + 12;
+
+        // Flip left if spilling off the right edge of the viewport
+        if (event.clientX + tooltipWidth + 24 > window.innerWidth) {
+          left = event.pageX - tooltipWidth - 12;
+        }
+
+        // Flip up if spilling off the bottom edge of the viewport
+        if (event.clientY + tooltipHeight + 24 > window.innerHeight) {
+          top = event.pageY - tooltipHeight - 12;
+        }
         tooltip
-          .style("left", `${event.pageX + 12}px`)
-          .style("top", `${event.pageY + 12}px`);
-
+          .style("left", `${left}px`)
+          .style("top", `${top}px`);
       })
       .on("mouseout", function () {
 
