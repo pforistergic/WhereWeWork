@@ -7,7 +7,9 @@ const stateData = {
       "Danville",
       "Martinsville",
       "Charlottesville",
+      "Harrisonburg",
       "Newport News",
+      "Norfolk",
       "Lynchburg",
       "Marion",
       "Damascus",
@@ -19,6 +21,7 @@ const stateData = {
     name: "South Carolina",
     communities: [
       "Columbia",
+      "Charleston",
       "Lexington",
       "Darlington",
       "Kershaw",
@@ -34,7 +37,7 @@ const stateData = {
 
   GA: {
     name: "Georgia",
-    communities: ["Hapeville", "Madison", "Mableton"]
+    communities: ["Hapeville", "Madison", "Mableton", "Norcross", "Alpharetta"]
   },
 
   KY: {
@@ -44,12 +47,12 @@ const stateData = {
 
   MS: {
     name: "Mississippi",
-    communities: ["Gulfport", "Laurel", "Natchez", "Kosciusko"]
+    communities: ["Gulfport", "Laurel", "Natchez", "Kosciusko", "MBCI"]
   },
 
   FL: {
     name: "Florida",
-    communities: ["West Palm Beach"]
+    communities: ["West Palm Beach", "Miami Beach", "Jacksonville", "Orange County", "Boca Raton", "Pahokee", "South Bay", "Belle Glade", "Boynton"]
   },
 
   NY: {
@@ -78,8 +81,13 @@ const stateData = {
     communities: ["Bozeman"]
   },
 
-  //TX: {
-  //  name: "Texas",
-  //  communities: ["Dallas", "Ft Worth", "Austin", "San Antonio"]
-  //}
+  NC: {
+    name: "North Carolina",
+    communities: ["Wilmington", "Apex"]
+  },
+
+  AL: {
+    name: "Alabama",
+    communities: ["Auburn"]
+  },
 };
