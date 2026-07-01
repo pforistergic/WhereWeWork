@@ -13,7 +13,8 @@ const stateData = {
       "Lynchburg",
       "Marion",
       "Damascus",
-      "Arlington"
+      "Arlington",
+      "James City County"
     ]
   },
 
@@ -57,7 +58,7 @@ const stateData = {
 
   NY: {
     name: "New York",
-    communities: ["Syracuse"]
+    communities: ["Syracuse", "Ulster County"]
   },
 
   RI: {
