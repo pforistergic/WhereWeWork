@@ -20,7 +20,7 @@ header {
 /* Responsive SVG */
 #map {
   display: block;
-  width: 100%;
+  width: 100vh;
   height: auto;
 }
 

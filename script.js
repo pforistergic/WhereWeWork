@@ -3,7 +3,7 @@ const tooltip = d3.select("#tooltip");
 
 // Internal drawing size
 const width = 960;
-const height = 600;
+const height = 600; 
 
 // Make the SVG responsive
 svg
