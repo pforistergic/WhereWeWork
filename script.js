@@ -8,9 +8,9 @@ const height = 600;
 // Make the SVG responsive
 svg
   .attr("viewBox", `0 0 ${width} ${height}`)
-  .attr("preserveAspectRatio", "xMidYMid meet")
-  .attr("width", "100%")
-  .attr("height", "100%");
+  //.attr("preserveAspectRatio", "xMidYMid meet")
+  //.attr("width", "100%")
+  //.attr("height", "100%");
 
 const projection = d3.geoAlbersUsa();
 const path = d3.geoPath().projection(projection);

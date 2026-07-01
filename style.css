@@ -14,14 +14,14 @@ header {
 
 /* Container */
 .map-wrapper {
-  width: 100%;
+  width: 100vh;
 }
 
 /* Responsive SVG */
 #map {
   display: block;
-  width: 100vh;
-  height: auto;
+  width: auto;
+  height: 100vh;
 }
 
 /* STATES */
